@@ -51,39 +51,69 @@ data: 2023-09-27
 Checkout the instruction of your right platform below:
 
 <!------------------------- Panel Tab for setup-------------------------------->
-::::: {.panel-tabset}
+
+
+:::: {.panel-tabset}
 
 ### MacOs
 
-Open this **[link](https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal)** and download.
+<!-- :::: {.columns} -->
 
-Once download is finished: 
+<!-- ::: {.column width="70%"} -->
 
-1. Open the downloaded `zip`
+Open this **[link](https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal)** to download, once it is finished:
 
+1. Open the downloaded `VSCode-darwin-universal.zip` file
 2. Move the extracted VS Code app from `Downloads` to `Applications` (Located to your left under `Favorites`)
-
 3. Launch VS Code and open the `Command Palette` by `Cmd + Shift + P`
-
 4. Type `shell command`
-
 5. Select the option: **Install `code` command in PATH**
-
 6. Restart your terminal and try entering: `code --version` to confirm successful installation
 
+<!-- ::: -->
 
-### Linux
 
-- a linux
+<!-- ::: -->
 
-:::::
+
+<!-- :::: -->
+
+### Windows
+
+Open this **[link](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user)** and download.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+Once download is finished, run the installer and accept all default configuration except:
+
+ - **On Select Additional Tasks**
+    
+    - Add 'Open with Code action to Windows file context menu'
+    - Add ‘Open with Code’ action to Windows directory context menu”
+    - Register Code as an editor for supported file types
+    - Add to PATH (should be selected by default)
+
+:::
+
+::: {.column width="50%"}
+
+![](materials/img/windows_vsc.png){.absolute top=225 right=25 width="750" height="600"}
+
+:::
+
+::::
+
+
+::::
 
 
 ## Sockeye
 
 Hello, this is slide 1
 
-<!--- Incremental list --->
+
 ::: {.incremental}
 
 - Test 1
