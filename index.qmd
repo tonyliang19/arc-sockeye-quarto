@@ -3,11 +3,24 @@ title: Introduction to Sockeye
 author: Tony Liang
 format: 
   revealjs:
-    theme: sockeye.scss
+    slide-number: c/t
+    width: 1600
+    height: 900
+    theme:
+      #- simple
+      #- serif 
+      - default
+      - sockeye.scss
+      #- sockeye.scss
     output-file: slide.html
+    transition: fade
+    transition-speed: default # or fast or slow
+institute: University of British Columbia
+data: 2023-09-27
+
 ---
 
-# Overview
+# Sockeye
 
 Hello, this is slide 1
 
@@ -21,12 +34,55 @@ Hello, this is slide 1
 :::
 
 
-# This is slide 2
+# VS Code
 
 ::: {.nonincremental}
 
 - Non increment , should appear together
 - Non increment , should appear together
 - Non increment , should appear together
+
+:::
+
+---
+
+New slide, should have a pause 
+
+<!---
+space matters here ". . ."
+means to show thing later after this
+--->
+
+. . . 
+
+Show later
+
+# Terminal
+
+:::: {.columns}
+
+::: {.column width="40%"}
+This is left column
+:::
+
+::: {.column width="60%"}
+This is right column
+:::
+
+::::
+
+# Yet another slide with tabsets
+
+::: {.panel-tabset}
+
+## Tab 1
+
+- a
+- b
+
+## Tab 2
+
+- c
+- d
 
 :::

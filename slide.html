@@ -332,12 +332,15 @@
 <div class="quarto-title-author-name">
 Tony Liang 
 </div>
-</div>
+        <p class="quarto-title-affiliation">
+            University of British Columbia
+          </p>
+    </div>
 </div>
 
 </section>
-<section id="overview" class="title-slide slide level1 center">
-<h1>Overview</h1>
+<section id="sockeye" class="title-slide slide level1 center">
+<h1>Sockeye</h1>
 <p>Hello, this is slide 1</p>
 <!--- Incremental list --->
 <div>
@@ -349,14 +352,57 @@ Tony Liang
 </div>
 </section>
 
-<section id="this-is-slide-2" class="title-slide slide level1 center">
-<h1>This is slide 2</h1>
+<section>
+<section id="vs-code" class="title-slide slide level1 center">
+<h1>VS Code</h1>
 <div>
 <ul>
 <li>Non increment , should appear together</li>
 <li>Non increment , should appear together</li>
 <li>Non increment , should appear together</li>
 </ul>
+</div>
+</section>
+<section class="slide level2">
+
+<p>New slide, should have a pause</p>
+<!---
+space matters here ". . ."
+means to show thing later after this
+--->
+<div class="fragment">
+<p>Show later</p>
+</div>
+</section></section>
+<section id="terminal" class="title-slide slide level1 center">
+<h1>Terminal</h1>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>This is left column</p>
+</div><div class="column" style="width:60%;">
+<p>This is right column</p>
+</div>
+</div>
+</section>
+
+<section id="yet-another-slide-with-tabsets" class="title-slide slide level1 center">
+<h1>Yet another slide with tabsets</h1>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Tab 1</a></li><li><a href="#tabset-1-2">Tab 2</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<ul>
+<li>a</li>
+<li>b</li>
+</ul>
+</div>
+<div id="tabset-1-2">
+<ul>
+<li>c</li>
+<li>d</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="footer footer-default">
 
@@ -414,7 +460,7 @@ Tony Liang
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -519,7 +565,7 @@ Tony Liang
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'fade',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
@@ -539,9 +585,9 @@ Tony Liang
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1600,
 
-        height: 700,
+        height: 900,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
