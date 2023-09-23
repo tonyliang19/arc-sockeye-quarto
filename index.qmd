@@ -127,10 +127,10 @@ This is left column
 :::
 
 ::: {.column width="60%"}
-This is right column
-:::
 
-::::
+This is right column
+
+:::
 
 ::::
 
