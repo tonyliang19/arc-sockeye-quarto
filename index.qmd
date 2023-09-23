@@ -4,6 +4,7 @@ author: Tony Liang
 format: 
   revealjs:
     slide-number: c/t
+    embed-resources: true
     width: 1600
     height: 900
     theme:
@@ -20,7 +21,85 @@ data: 2023-09-27
 
 ---
 
-# Sockeye
+## Land acknowledgement
+
+:::: {.columns}
+
+::: {.column width="70%"}
+**I would like to acknowledge that I work on the traditional, ancestral, and unceded territory of the Coast Salish Peoples, including the territories of the xwməθkwəy̓əm (Musqueam), Skwxwú7mesh (Squamish), Stó:lō and Səl̓ílwətaʔ/Selilwitulh (Tsleil- Waututh) Nations.**
+
+*Traditional*: Traditionally used and/or occupied by Musqueam people
+
+*Ancestral*: Recognizes land that is handed down from generation to generation
+
+*Unceded*: Refers to land that was not turned over to the Crown (government) by a treaty or other agreement
+:::
+
+::: {.column width="30%"}
+
+![](materials/img/land_acknowledgement.gif)
+
+:::
+
+::::
+
+
+## Setup
+
+Checkout the instruction of your right platform to setup!
+
+::: {.panel-tabset}
+
+### Windows
+
+Open this **[link](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user)** and download.
+
+:::: {.columns}
+
+::: {.column width="30%"}
+Once download is finished, run the installer and accept all default configuration except:
+ - **On Select Additional Tasks**
+    + Add 'Open with Code action to Windows file context menu'
+    
+    + Add ‘Open with Code’ action to Windows directory context menu”
+    
+    + Register Code as an editor for supported file types
+    
+    + Add to PATH (should be selected by default)
+
+:::
+
+::: {.column width="70%"}
+
+
+:::
+
+![](materials/img/windows_vsc.png)
+
+::::
+
+### MacOs
+
+Open this **[link](https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal)** and download.
+
+Once download is finished: 
+1. Open the downloaded `zip`
+
+1. Move the extracted VS Code app from `Downloads` to `Applications` (Located to your left under `Favorites`)
+
+1. Launch VS Code and open the `Command Palette` by `Cmd + Shift + P`
+
+1. Type `shell command`
+
+1. Select the option: **Install `code` command in PATH**
+
+1. Restart your terminal and try entering: `code --version` to confirm successful installation
+
+### Linux
+
+:::
+
+## Sockeye
 
 Hello, this is slide 1
 
@@ -34,7 +113,7 @@ Hello, this is slide 1
 :::
 
 
-# VS Code
+## VS Code
 
 ::: {.nonincremental}
 
@@ -57,7 +136,7 @@ means to show thing later after this
 
 Show later
 
-# Terminal
+## Terminal
 
 :::: {.columns}
 
@@ -73,16 +152,5 @@ This is right column
 
 # Yet another slide with tabsets
 
-::: {.panel-tabset}
-
-## Tab 1
-
-- a
-- b
-
-## Tab 2
-
-- c
-- d
 
 :::
