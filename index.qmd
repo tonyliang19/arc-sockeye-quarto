@@ -4,7 +4,7 @@ author: Tony Liang
 format: 
   revealjs:
     slide-number: c/t
-    embed-resources: true
+    #embed-resources: true
     width: 1600
     height: 900
     theme:
