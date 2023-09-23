@@ -1,0 +1,31 @@
+---
+title: Introduction to Sockeye
+author: Tony Liang
+format: 
+  revealjs:
+    theme: sockeye.scss
+---
+
+# Overview
+
+Hello, this is slide 1
+
+<!--- Incremental list --->
+::: {.incremental}
+
+- Test 1
+- Test 2
+- Test 3
+
+:::
+
+
+# This is slide 2
+
+::: {.nonincremental}
+
+- Non increment , should appear together
+- Non increment , should appear together
+- Non increment , should appear together
+
+:::
