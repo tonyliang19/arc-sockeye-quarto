@@ -23,6 +23,7 @@ data: 2023-09-27
 
 ## Land acknowledgement
 
+<!----------------------------Two column section------------------------------------>
 :::: {.columns}
 
 ::: {.column width="70%"}
@@ -33,6 +34,7 @@ data: 2023-09-27
 *Ancestral*: Recognizes land that is handed down from generation to generation
 
 *Unceded*: Refers to land that was not turned over to the Crown (government) by a treaty or other agreement
+
 :::
 
 ::: {.column width="30%"}
@@ -46,58 +48,36 @@ data: 2023-09-27
 
 ## Setup
 
-Checkout the instruction of your right platform to setup!
+Checkout the instruction of your right platform below:
 
-::: {.panel-tabset}
-
-### Windows
-
-Open this **[link](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user)** and download.
-
-:::: {.columns}
-
-::: {.column width="30%"}
-Once download is finished, run the installer and accept all default configuration except:
- - **On Select Additional Tasks**
-    + Add 'Open with Code action to Windows file context menu'
-    
-    + Add ‘Open with Code’ action to Windows directory context menu”
-    
-    + Register Code as an editor for supported file types
-    
-    + Add to PATH (should be selected by default)
-
-:::
-
-::: {.column width="70%"}
-
-
-:::
-
-![](materials/img/windows_vsc.png)
-
-::::
+<!------------------------- Panel Tab for setup-------------------------------->
+::::: {.panel-tabset}
 
 ### MacOs
 
 Open this **[link](https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal)** and download.
 
 Once download is finished: 
+
 1. Open the downloaded `zip`
 
-1. Move the extracted VS Code app from `Downloads` to `Applications` (Located to your left under `Favorites`)
+2. Move the extracted VS Code app from `Downloads` to `Applications` (Located to your left under `Favorites`)
 
-1. Launch VS Code and open the `Command Palette` by `Cmd + Shift + P`
+3. Launch VS Code and open the `Command Palette` by `Cmd + Shift + P`
 
-1. Type `shell command`
+4. Type `shell command`
 
-1. Select the option: **Install `code` command in PATH**
+5. Select the option: **Install `code` command in PATH**
 
-1. Restart your terminal and try entering: `code --version` to confirm successful installation
+6. Restart your terminal and try entering: `code --version` to confirm successful installation
+
 
 ### Linux
 
-:::
+- a linux
+
+:::::
+
 
 ## Sockeye
 
@@ -123,7 +103,7 @@ Hello, this is slide 1
 
 :::
 
----
+## Another Slide here
 
 New slide, should have a pause 
 
@@ -141,7 +121,9 @@ Show later
 :::: {.columns}
 
 ::: {.column width="40%"}
+
 This is left column
+
 :::
 
 ::: {.column width="60%"}
@@ -150,7 +132,8 @@ This is right column
 
 ::::
 
-# Yet another slide with tabsets
+::::
 
+## Yet another slide with tabsets
 
-:::
+wow
