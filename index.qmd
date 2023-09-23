@@ -4,6 +4,7 @@ author: Tony Liang
 format: 
   revealjs:
     theme: sockeye.scss
+    output-file: slide.html
 ---
 
 # Overview
