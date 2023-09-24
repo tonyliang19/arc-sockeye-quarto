@@ -5,9 +5,10 @@ institute: University of British Columbia
 data: 2023-09-27
 engine: knitr
 css: 
-  - sockeye.css
+  - materials/sockeye.css
 format:
   revealjs:
+    #slide-level: 2
     slide-number: c/t
     embed-resources: true
     width: 1600
@@ -113,6 +114,14 @@ Once download is finished, run the installer and accept all default configuratio
 
 ## Connecting to Sockeye
 
+::::: {.columns}
+
+:::: {.column width="52%"}
+
+::: {.callout-note}
+You need to have a UBC IP address in order to access to the server by connecting to *eduroam* or *ubcsecure*
+:::
+
 Login to sockeye with the `ssh` command:
 ```{bash}
 #| include: true
@@ -122,29 +131,37 @@ Login to sockeye with the `ssh` command:
 ssh cwl@sockeye.arc.ubc.ca
 ```
 
-::: {.incremental}
 
+::: {.incremental}
 - `cwl` is your campus wide login
+
 - password is your same CWL password
+
 - `sockeye.arc.ubc.ca` is the server address
 
+- However, we need Two-Factor Authentication (**2FA**)
+
 :::
 
-. . .
+::::
 
-::: {.callout-note}
-You need to have a UBC IP address in order to access to the server by connecting to *eduroam* or *ubcsecure*
-:::
+:::: {.column width="48%"}
+
+![](materials/img/sockeye_login.png){.absolute top=0 right=25 width="650" height="800"}
+
+::::
+
+:::::
 
 ## Alternative way connecting to Sockeye
 
-::: {.callout-tip}
+<!-- ::: {.callout-tip}
 You probably tired of typing password over and over to login to server, we could make more use of `ssh`
-:::
+::: -->
 
 :::: {.columns}
 
-::: {.column width="40%"}
+::: {.column width="35%"}
 
 Generate a new `ssh` key pair 
 
@@ -157,39 +174,84 @@ ssh-keygen -t rsa
 ```
 
 - Follow the defaults by prompting `Enter`
-- Passphrase not required, personal flavor
+- Passphrase `Optional`
+- Two keys generated:
+  * one public (`id_rsa.pub`)
+  * one **private** (`id_rsa`)
 
-:::
-
-::: {.column width="30%"}
-
-Prompt the following to check existing `ssh` keys with id_* format:
-
-```{bash}
-#| include: true
-#| eval:  false
-#| echo:  true
-#| code-line-numbers: false
-ls -a ~/.ssh/
-```
-
-- one public (id_*.pub)
-- one private (id_*)
-
-:::
-
-::: {.column width="30%"}
+::: {.fragment .fade-up}
 
 ::: {.callout-caution}
-
 Keep the **private** key safe and for your use only
 
 :::
 
 :::
 
+:::
+
+::: {.column width="65%"}
+
+::: {.fragment .fade-left}
+
+Add your **public** key to the server
+
+::: {.panel-tabset}
+
+### Bash/Zsh
+
+```{bash}
+#| eval:  false
+#| echo: true
+#| code-line-numbers: "2"
+# Need to replace cwl!
+ssh-copy-id -i ~/.ssh/id_rsa.pub
+```
+
+### Powershell
+
+```{bash}
+#| eval:  false
+#| echo: true
+#| code-line-numbers: "2"
+# Need to replace cwl!
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh cwl@sockeye.arc.ubc.ca "cat >> .ssh/authorized_keys"
+```
+:::
+
+:::
+
+::: {.fragment .fade-up}
+
+Use any editor to create `~/.ssh/config` and enter the following:
+```{bash}
+#| eval:  false
+#| echo:  true
+#| code-line-numbers: "|2|3|4"
+# Note these indent matters
+Host  arc # or another alias you like
+  HostName sockeye.arc.ubc.ca
+  User cwl # replace your cwl
+```
+
+- Host = User@Hostname
+
+- Multiple configuration (multiple servers)
+
+- More options available , look at [here](https://www.ssh.com/academy/ssh/config)
+
+:::
+
+:::
+
+::: aside
+If you feel instructions unclear, follow this [guide](https://tonyliang19.github.io/arc-sockeye/#41)
+:::
+
+
 
 ::::
+
 
 
 ## VS Code
