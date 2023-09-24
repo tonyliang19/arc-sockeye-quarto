@@ -136,6 +136,60 @@ ssh cwl@sockeye.arc.ubc.ca
 You need to have a UBC IP address in order to access to the server by connecting to *eduroam* or *ubcsecure*
 :::
 
+## Alternative way connecting to Sockeye
+
+::: {.callout-tip}
+You probably tired of typing password over and over to login to server, we could make more use of `ssh`
+:::
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+Generate a new `ssh` key pair 
+
+```{bash}
+#| include: true
+#| eval:  false
+#| echo:  true
+#| code-line-numbers: false
+ssh-keygen -t rsa
+```
+
+- Follow the defaults by prompting `Enter`
+- Passphrase not required, personal flavor
+
+:::
+
+::: {.column width="30%"}
+
+Prompt the following to check existing `ssh` keys with id_* format:
+
+```{bash}
+#| include: true
+#| eval:  false
+#| echo:  true
+#| code-line-numbers: false
+ls -a ~/.ssh/
+```
+
+- one public (id_*.pub)
+- one private (id_*)
+
+:::
+
+::: {.column width="30%"}
+
+::: {.callout-caution}
+
+Keep the **private** key safe and for your use only
+
+:::
+
+:::
+
+
+::::
 
 
 ## VS Code
