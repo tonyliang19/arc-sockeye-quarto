@@ -1,24 +1,26 @@
 ---
 title: Introduction to Sockeye
 author: Tony Liang
-format: 
+institute: University of British Columbia
+data: 2023-09-27
+engine: knitr
+css: 
+  - sockeye.css
+format:
   revealjs:
     slide-number: c/t
     embed-resources: true
     width: 1600
     height: 900
+    mouse-wheel: true
     theme:
       #- simple
       #- serif 
-      - default
+      #- default
       - sockeye.scss
-      #- sockeye.scss
     output-file: index.html # naming other stuff, gh complains
     transition: fade
     transition-speed: default # or fast or slow
-institute: University of British Columbia
-data: 2023-09-27
-
 ---
 
 ## Land acknowledgement
@@ -109,18 +111,31 @@ Once download is finished, run the installer and accept all default configuratio
 ::::
 
 
-## Sockeye
+## Connecting to Sockeye
 
-Hello, this is slide 1
-
+Login to sockeye with the `ssh` command:
+```{bash}
+#| include: true
+#| eval:  false
+#| echo:  true
+#| code-line-numbers: true
+ssh cwl@sockeye.arc.ubc.ca
+```
 
 ::: {.incremental}
 
-- Test 1
-- Test 2
-- Test 3
+- `cwl` is your campus wide login
+- password is your same CWL password
+- `sockeye.arc.ubc.ca` is the server address
 
 :::
+
+. . .
+
+::: {.callout-note}
+You need to have a UBC IP address in order to access to the server by connecting to *eduroam* or *ubcsecure*
+:::
+
 
 
 ## VS Code
