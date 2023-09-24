@@ -1,3 +1,13 @@
 code.sourceCode {
   font-size: 2em;
 }
+
+/* 
+To change the font size of both code chunk code and output,
+use only the code tag as css selector. 
+And remove above css selector
+code {
+  font-size: 1.3em;
+   // or try font-size: xx-large; 
+}
+*/
