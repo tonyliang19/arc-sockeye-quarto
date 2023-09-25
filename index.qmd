@@ -163,12 +163,12 @@ Generate a new `ssh` key pair
 #| include: true
 #| eval:  false
 #| echo:  true
-#| code-line-numbers: false
+#| code-line-numbers: true
 ssh-keygen -t rsa
 ```
 
-- Follow the defaults by prompting `Enter`
-- Passphrase `Optional`
+- Follow default by prompting `Enter`
+- Passphrase optional
 - Two keys generated:
   * one public (`id_rsa.pub`)
   * one [private]{.third} (`id_rsa`)
@@ -208,6 +208,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub
 #| eval:  false
 #| echo: true
 #| code-line-numbers: "2"
+#| code-overflow: scroll
 # Need to replace cwl!
 type $env:USERPROFILE\.ssh\id_rsa.pub | ssh cwl@sockeye.arc.ubc.ca "cat >> .ssh/authorized_keys"
 ```
@@ -228,7 +229,7 @@ Host  arc # or another alias you like
   User cwl # replace your cwl
 ```
 
-- Host = User@Hostname
+- [Host = User@Hostname]{.secondary}
 
 - Multiple configuration (multiple servers)
 
@@ -240,7 +241,7 @@ Host  arc # or another alias you like
 
 ::: aside
 
-If you feel 1instructions unclear, follow this [guide](https://tonyliang19.github.io/arc-sockeye/#41)
+If you feel instructions unclear, follow this [guide](https://tonyliang19.github.io/arc-sockeye/#41)
 
 :::
 
@@ -252,15 +253,51 @@ If you feel 1instructions unclear, follow this [guide](https://tonyliang19.githu
 
 ## Sockeye 
 
-Sockeye is a "high performance computing" (HPC) platform
-
+- Upon login, you land on the `login` node and spend most time here
 - Use it to run [large]{.secondary} computational works
-- Upon login, you're on a "login" node
+- Whenever you're ready, you submit `batch` jobs to server
 - You can log out and leave a job running
-- Runs with `PBS`, changing to `SLURM` soon
+- Runs with `PBS`, changing to `SLURM`^[Please see [here](https://confluence.it.ubc.ca/display/UARC/PBS+to+Slurm+Migration+-+What+to+expect) for more info.] soon
+- Hard in the beginning, we are making a FAQ now
+
+::: {.callout-tip}
+
+We also have a recorded session from past months, if you're interested please contact Amrit
+
+:::
+
+:::{.aside}
+Sockeye is named after the Sockeye salmon (Oncorhyncus nerka), native to the Northern Pacific Ocean and the rivers discharging into it.
+:::
+
+---
+
+![](materials/img/arc-structure.jpg)
 
 
+## Directories on Sockeye
 
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](materials/img/arc-dir.png)
+
+:::
+
+::: {.column width="50%"}
+
+![](materials/img/ro-dir.png)
+
+:::
+
+::::
+
+::: {.callout-tip}
+
+Remember that `read/write` access matters! You clearly don't want to spend hours fitting models, but failed to write any results, cause you forgot to specify it to be the **scratch** directory.
+
+:::
 ## Another Slide here
 
 New slide, should have a pause 

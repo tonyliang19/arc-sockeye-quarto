@@ -8,10 +8,6 @@
   color: var(--primary);
 }
 
-.smaller {
-  font-size: 3em;
-}
-
 .secondary {
   color: var(--secondary);
 }
