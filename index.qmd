@@ -9,6 +9,8 @@ css:
 format:
   revealjs:
     #slide-level: 2
+    template-partials:
+      - title-slide.html
     slide-number: c/t
     embed-resources: true
     width: 1600
@@ -49,7 +51,7 @@ format:
 ::::
 
 
-## Setup
+## Setup VSCode
 
 Checkout the instruction of your right platform below:
 
@@ -60,10 +62,6 @@ Checkout the instruction of your right platform below:
 
 ### MacOs
 
-<!-- :::: {.columns} -->
-
-<!-- ::: {.column width="70%"} -->
-
 Open this **[link](https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal)** to download, once it is finished:
 
 1. Open the downloaded `VSCode-darwin-universal.zip` file
@@ -73,26 +71,18 @@ Open this **[link](https://code.visualstudio.com/sha/download?build=stable&os=da
 5. Select the option: **Install `code` command in PATH**
 6. Restart your terminal and try entering: `code --version` to confirm successful installation
 
-<!-- ::: -->
-
-
-<!-- ::: -->
-
-
-<!-- :::: -->
 
 ### Windows
 
-Open this **[link](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user)** and download.
+Open this **[link](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user)** to download.
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 
-Once download is finished, run the installer and accept all default configuration except:
+Run the installer, accept default config except:
 
  - **On Select Additional Tasks**
-    
     - Add 'Open with Code action to Windows file context menu'
     - Add ‘Open with Code’ action to Windows directory context menu”
     - Register Code as an editor for supported file types
@@ -102,7 +92,8 @@ Once download is finished, run the installer and accept all default configuratio
 
 ::: {.column width="50%"}
 
-![](materials/img/windows_vsc.png){.absolute top=225 right=25 width="750" height="600"}
+<!-- ![](materials/img/windows_vsc.png){.absolute top=225 right=25 width="750" height="600"} -->
+![](materials/img/windows_vsc.png){.absolute top=275 right=25 width="750" height="600"}
 
 :::
 
@@ -119,7 +110,10 @@ Once download is finished, run the installer and accept all default configuratio
 :::: {.column width="52%"}
 
 ::: {.callout-note}
-You need to have a UBC IP address in order to access to the server by connecting to *eduroam* or *ubcsecure*
+
+You need to have a UBC IP address in order to access to the server by connecting to *eduroam* or 
+*ubcsecure*
+
 :::
 
 Login to sockeye with the `ssh` command:
@@ -139,7 +133,7 @@ ssh cwl@sockeye.arc.ubc.ca
 
 - `sockeye.arc.ubc.ca` is the server address
 
-- However, we need Two-Factor Authentication (**2FA**)
+- you also need Two-Factor Authentication [2FA]{.secondary}
 
 :::
 
@@ -177,12 +171,12 @@ ssh-keygen -t rsa
 - Passphrase `Optional`
 - Two keys generated:
   * one public (`id_rsa.pub`)
-  * one **private** (`id_rsa`)
+  * one [private]{.third} (`id_rsa`)
 
 ::: {.fragment .fade-up}
 
 ::: {.callout-caution}
-Keep the **private** key safe and for your use only
+Keep the [private]{.third} key safe and for your use only
 
 :::
 
@@ -227,7 +221,7 @@ Use any editor to create `~/.ssh/config` and enter the following:
 ```{bash}
 #| eval:  false
 #| echo:  true
-#| code-line-numbers: "|2|3|4"
+#| code-line-numbers: "|2|3|4|2-4"
 # Note these indent matters
 Host  arc # or another alias you like
   HostName sockeye.arc.ubc.ca
@@ -245,7 +239,9 @@ Host  arc # or another alias you like
 :::
 
 ::: aside
-If you feel instructions unclear, follow this [guide](https://tonyliang19.github.io/arc-sockeye/#41)
+
+If you feel 1instructions unclear, follow this [guide](https://tonyliang19.github.io/arc-sockeye/#41)
+
 :::
 
 
@@ -254,15 +250,16 @@ If you feel instructions unclear, follow this [guide](https://tonyliang19.github
 
 
 
-## VS Code
+## Sockeye 
 
-::: {.nonincremental}
+Sockeye is a "high performance computing" (HPC) platform
 
-- Non increment , should appear together
-- Non increment , should appear together
-- Non increment , should appear together
+- Use it to run [large]{.secondary} computational works
+- Upon login, you're on a "login" node
+- You can log out and leave a job running
+- Runs with `PBS`, changing to `SLURM` soon
 
-:::
+
 
 ## Another Slide here
 

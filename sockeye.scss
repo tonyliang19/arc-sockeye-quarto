@@ -7,12 +7,13 @@
 // Base settings for all themes that can optionally be
 // overridden by the super-theme
 
+
 // Background of the presentation
 $backgroundColor: #fcfbf9;
 
 // Primary/body text
 $mainFont: 'Jost', sans-serif;
-$mainFontSize: 2em;//30px;
+$mainFontSize: 2.25em;//30px;
 $mainColor: #333;
 
 // Vertical spacing between blocks of text
@@ -46,11 +47,20 @@ $selectionColor: #fff;
 
 // start using css here
 #title-slide > h1 {
-  color: black;
+  color:  var($headingColor);
 }
 
 #title-slide .author {
   color: black;
+}
+
+#title-slide .institute {
+  font-size: 1.5em;
+}
+
+
+#title-slide > .author:first-of-type {
+  margin-top: 320px;
 }
 
 // #title-slide {

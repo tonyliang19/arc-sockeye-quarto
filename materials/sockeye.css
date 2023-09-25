@@ -1,6 +1,29 @@
+:root {
+--primary: #2c365e;
+--secondary: #e98a15;
+--third: #FF5E99;
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.smaller {
+  font-size: 3em;
+}
+
+.secondary {
+  color: var(--secondary);
+}
+
+.third {
+  color: var(--third)
+}
+
 code.sourceCode {
   font-size: 2.25em;
 }
+
 
 /* .pause ul {
   margin-bottom: 0 !important;
