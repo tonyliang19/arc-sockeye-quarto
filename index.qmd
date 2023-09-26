@@ -150,12 +150,29 @@ ssh cwl@sockeye.arc.ubc.ca
 ## Alternative way connecting to Sockeye
 
 <!-- ::: {.callout-tip}
+
 You probably tired of typing password over and over to login to server, we could make more use of `ssh`
+
 ::: -->
 
 :::: {.columns}
 
-::: {.column width="35%"}
+::: {.column width="60%"}
+
+::: {.incremental}
+
+1. Generate new  `ssh` key pair credentials in your local
+2. Add the [public]{.secondary} key to the server-side
+3. Add your server login info into `~/.ssh/config` in your local
+4. Login with `ssh <new_alias>`
+  
+:::
+
+:::
+
+::: {.column width="40%"}
+
+::: {.fragment .fade-in-then-semi-out}
 
 Generate a new `ssh` key pair 
 
@@ -173,21 +190,21 @@ ssh-keygen -t rsa
   * one public (`id_rsa.pub`)
   * one [private]{.third} (`id_rsa`)
 
-::: {.fragment .fade-up}
+:::
+
+:::
+
+::::
+
+. . .
 
 ::: {.callout-caution}
+
 Keep the [private]{.third} key safe and for your use only
 
 :::
 
-:::
-
-:::
-
-::: {.column width="65%"}
-
-::: {.fragment .fade-left}
-
+## Alternative way connecting to Sockeye
 Add your **public** key to the server
 
 ::: {.panel-tabset}
@@ -212,11 +229,15 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub
 # Need to replace cwl!
 type $env:USERPROFILE\.ssh\id_rsa.pub | ssh cwl@sockeye.arc.ubc.ca "cat >> .ssh/authorized_keys"
 ```
-:::
 
 :::
+
 
 ::: {.fragment .fade-up}
+
+:::: {.columns}
+
+::: {.column width="70%"}
 
 Use any editor to create `~/.ssh/config` and enter the following:
 ```{bash}
@@ -229,13 +250,20 @@ Host  arc # or another alias you like
   User cwl # replace your cwl
 ```
 
+:::
+
+::: {.column width="30%"}
+
+<br>
+
+
 - [Host = User@Hostname]{.secondary}
-
 - Multiple configuration (multiple servers)
-
 - More options available , look at [here](https://www.ssh.com/academy/ssh/config)
 
 :::
+
+::::
 
 :::
 
@@ -246,19 +274,28 @@ If you feel instructions unclear, follow this [guide](https://tonyliang19.github
 :::
 
 
-
-::::
-
-
-
 ## Sockeye 
+
+```{bash}
+#| code-line-numbers: true
+#| eval:  false
+#| echo:  true
+# If you followed earlier configuration correctly
+ssh arc # otherwise ssh cwl@sockeye.arc.ubc.ca
+```
+
+::: {.incremental}
 
 - Upon login, you land on the `login` node and spend most time here
 - Use it to run [large]{.secondary} computational works
 - Whenever you're ready, you submit `batch` jobs to server
 - You can log out and leave a job running
 - Runs with `PBS`, changing to `SLURM`^[Please see [here](https://confluence.it.ubc.ca/display/UARC/PBS+to+Slurm+Migration+-+What+to+expect) for more info.] soon
-- Hard in the beginning, we are making a FAQ now
+
+
+:::
+
+. . .
 
 ::: {.callout-tip}
 
