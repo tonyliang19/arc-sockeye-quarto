@@ -447,4 +447,4 @@ We are building our lab handbook with known FAQs for debugging on Sockeye, check
 ## {background-image=materials/img/website_bkg.png background-size=contain background-position=top}
 
 
-[Thanks!]{.default .larger .center}
+[Thanks!]{.larger .center-custom}

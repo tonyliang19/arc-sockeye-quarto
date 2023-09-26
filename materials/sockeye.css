@@ -5,19 +5,18 @@
 --third: #FF5E99;
 }
 
-.larger { font-size: 400% }
+.larger { 
+  font-size: 400%;
+  color: var(--default);
+}
 .large { font-size: 130% }
 
-.center {
+.center-custom {
   text-align: center; /* Center text horizontally */
   display: flex; /* Enable flexbox layout */
   justify-content: center; /* Center horizontally within its parent */
   align-items: center; /* Center vertically within its parent */
   height: 100vh; /* Ensure the element takes up the full viewport height */
-}
-
-.default {
-  color: var(--default);
 }
 
 .primary {
