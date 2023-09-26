@@ -1,7 +1,23 @@
 :root {
+--default: #006791;
 --primary: #2c365e;
 --secondary: #e98a15;
 --third: #FF5E99;
+}
+
+.larger { font-size: 400% }
+.large { font-size: 130% }
+
+.center {
+  text-align: center; /* Center text horizontally */
+  display: flex; /* Enable flexbox layout */
+  justify-content: center; /* Center horizontally within its parent */
+  align-items: center; /* Center vertically within its parent */
+  height: 100vh; /* Ensure the element takes up the full viewport height */
+}
+
+.default {
+  color: var(--default);
 }
 
 .primary {
@@ -20,6 +36,10 @@ code.sourceCode {
   font-size: 2.25em;
 }
 
+.tl  { text-align: left; }
+.tr  { text-align: right; }
+.tc  { text-align: center; }
+.tj  { text-align: justify; }
 
 /* .pause ul {
   margin-bottom: 0 !important;
