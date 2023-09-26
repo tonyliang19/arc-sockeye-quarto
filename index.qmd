@@ -126,7 +126,8 @@ ssh cwl@sockeye.arc.ubc.ca
 ```
 
 
-::: {.incremental}
+<!-- ::: {.incremental} -->
+
 - `cwl` is your campus wide login
 
 - password is your same CWL password
@@ -135,7 +136,7 @@ ssh cwl@sockeye.arc.ubc.ca
 
 - you also need Two-Factor Authentication [2FA]{.secondary}
 
-:::
+<!-- ::: -->
 
 ::::
 
@@ -159,14 +160,14 @@ You probably tired of typing password over and over to login to server, we could
 
 ::: {.column width="60%"}
 
-::: {.incremental}
+<!-- ::: {.incremental} -->
 
 1. Generate new  `ssh` key pair credentials in your local
 2. Add the [public]{.secondary} key to the server-side
 3. Add your server login info into `~/.ssh/config` in your local
 4. Login with `ssh <new_alias>`
   
-:::
+<!-- ::: -->
 
 :::
 
@@ -287,7 +288,7 @@ If you feel instructions unclear, follow this [guide](https://tonyliang19.github
 ssh arc # otherwise ssh cwl@sockeye.arc.ubc.ca
 ```
 
-::: {.incremental}
+<!-- ::: {.incremental} -->
 
 - Upon login, you land on the `login` node and spend most time here
 - Use it to run [large]{.secondary} computational works
@@ -296,7 +297,7 @@ ssh arc # otherwise ssh cwl@sockeye.arc.ubc.ca
 - Runs with `PBS`, changing to `SLURM`^[Please see [here](https://confluence.it.ubc.ca/display/UARC/PBS+to+Slurm+Migration+-+What+to+expect) for more info.] soon
 
 
-:::
+<!-- ::: -->
 
 . . .
 
