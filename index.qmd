@@ -320,7 +320,7 @@ Sockeye is named after the Sockeye salmon (Oncorhyncus nerka), native to the Nor
 
 :::: {.columns}
 
-::: {.column width="53%"}
+::: {.column width="54%"}
 
 ![](materials/img/arc-dir.png)
 
@@ -328,7 +328,7 @@ Sockeye is named after the Sockeye salmon (Oncorhyncus nerka), native to the Nor
 
 
 
-::: {.column width="47%"}
+::: {.column width="46%"}
 
 ::: {.fragment .fade-up}
 
