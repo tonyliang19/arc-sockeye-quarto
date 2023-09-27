@@ -58,7 +58,6 @@ format:
 
 Checkout the instruction of your right platform below:
 
-
 :::: {.panel-tabset}
 
 ### MacOS
@@ -104,7 +103,6 @@ On **Select Additional Tasks**:
 
 ::::
 
-
 ::::
 
 ::: {.aside}
@@ -122,7 +120,6 @@ These instructions are based on those from [DSCI310](https://ubc-dsci.github.io/
 
 ::: 
 
-
 ## Connecting to Sockeye
 
 ::::: {.columns}
@@ -131,8 +128,7 @@ These instructions are based on those from [DSCI310](https://ubc-dsci.github.io/
 
 ::: {.callout-note}
 
-You need to have a UBC IP address in order to access to the server by connecting to *eduroam* or 
-*ubcsecure*
+You need to have a UBC IP address in order to access to the server by connecting to UBC WIFI or VPN^[See [here](https://it.ubc.ca/services/email-voice-internet/myvpn/setup-documents) for how to setup the VPN]
 
 :::
 
@@ -148,13 +144,13 @@ ssh cwl@sockeye.arc.ubc.ca
 
 <!-- ::: {.incremental} -->
 
-- `cwl` is your campus wide login
+- `cwl` is your campus wide login.
 
-- password is your same CWL password
+- password is your same CWL password.
 
-- `sockeye.arc.ubc.ca` is the server address
+- `sockeye.arc.ubc.ca` is the server address.
 
-- you also need Two-Factor Authentication [2FA]{.secondary}
+- you also need Two-Factor Authentication [2FA]{.secondary}.
 
 <!-- ::: -->
 
@@ -167,6 +163,16 @@ ssh cwl@sockeye.arc.ubc.ca
 ::::
 
 :::::
+
+::: {.notes}
+
+* Remind to change `cwl` here
+* Remind to connect any of ubc wifi or vpn 
+* 2FA is more from duo mobile, most students has it
+* Mention there's another way to connect, future slides
+* Possible to use with VSCode, cover later
+
+:::
 
 ## Alternative way connecting to Sockeye
 
