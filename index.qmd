@@ -188,9 +188,9 @@ You probably tired of typing password over and over to login to server, we could
 
 <!-- ::: {.incremental} -->
 
-1. Generate new  `ssh` key pair credentials in your local
-2. Add the [public]{.secondary} key to the server-side
-3. Add your server login info into `~/.ssh/config` in your local
+1. Generate new  `ssh` key pair credentials in your local.
+2. Add your server login info into `~/.ssh/config` in your local.
+3. Add the [public]{.secondary} key to the server-side.
 4. Login with `ssh <new_alias>`
   
 <!-- ::: -->
@@ -231,34 +231,15 @@ Keep the [private]{.third} key safe and for your use only
 
 :::
 
-## Alternative way connecting to Sockeye
-Add your **public** key to the server
+::: {.notes}
 
-::: {.panel-tabset}
-
-### Bash/Zsh
-
-```{bash}
-#| eval:  false
-#| echo: true
-#| code-line-numbers: "2"
-# Need to replace cwl!
-ssh-copy-id -i ~/.ssh/id_rsa.pub
-```
-
-### Powershell
-
-```{bash}
-#| eval:  false
-#| echo: true
-#| code-line-numbers: "2"
-#| code-overflow: scroll
-# Need to replace cwl!
-type $env:USERPROFILE\.ssh\id_rsa.pub | ssh cwl@sockeye.arc.ubc.ca "cat >> .ssh/authorized_keys"
-```
+- Actually show the keys located in ~/.ssh
+- Tell not to use private
 
 :::
 
+
+## Alternative way connecting to Sockeye
 
 ::: {.fragment .fade-up}
 
@@ -291,6 +272,37 @@ Host  arc # or another alias you like
 :::
 
 ::::
+
+:::
+
+::: {.fragment .fade-up}
+
+Add your **public** key to the server
+
+::: {.panel-tabset}
+
+### Bash/Zsh
+
+```{bash}
+#| eval:  false
+#| echo: true
+#| code-line-numbers: "2"
+# arc is from our config
+ssh-copy-id -i ~/.ssh/id_rsa.pub arc # or cwl@sockeye.arc.ubc.ca
+```
+
+### Powershell
+
+```{bash}
+#| eval:  false
+#| echo: true
+#| code-line-numbers: "2"
+#| code-overflow: scroll
+# Need to replace cwl!
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh cwl@sockeye.arc.ubc.ca "cat >> .ssh/authorized_keys"
+```
+
+:::
 
 :::
 
