@@ -5,6 +5,19 @@
 --third: #FF5E99;
 }
 
+.main-title {
+  font-size: 80px;
+  text-align: center;
+}
+
+.reveal .slide-logo {
+  height: 100px !important;
+  width: 100px !important;
+  max-width: unset !important;
+  max-height: unset !important;
+  background-color: #fcfbf9;
+}
+
 .larger { 
   font-size: 400%;
   color: var(--default);
@@ -26,7 +39,18 @@
   display: flex; /* Enable flexbox layout */
   justify-content: center; /* Center horizontally within its parent */
   align-items: center; /* Center vertically within its parent */
-  height: 100vh; /* Ensure the element takes up the full viewport height */
+  height: 100vh;/* Ensure the element takes up the full viewport height */
+}
+
+.center2 {
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+  line-height: normal;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Align horizontal */
+  align-items: center;
 }
 
 /* Colors stuff */
