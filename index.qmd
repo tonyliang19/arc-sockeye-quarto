@@ -13,6 +13,7 @@ format:
     slide-number: true
     hash-one-based-index: true 
     history: false
+    footnotes-hover:  true
     #chalkboard: true
     template-partials:
       - title-slide.html
@@ -35,12 +36,6 @@ format:
 
 ## Land acknowledgement {background-image=materials/img/land_ack.jpg background-size=cover background-opacity="0.4"}
 
-
-<!----------------------------Two column section------------------------------------>
-<!-- :::: {.columns} -->
-
-<!-- ::: {.column width="70%"} -->
-
 **I would like to acknowledge that I work on the traditional, ancestral, and unceded territory of the Coast Salish Peoples, including the territories of the xwməθkwəy̓əm (Musqueam), Skwxwú7mesh (Squamish), Stó:lō and Səl̓ílwətaʔ/Selilwitulh (Tsleil- Waututh) Nations.**
 
 *Traditional*: Traditionally used and/or occupied by Musqueam people
@@ -49,59 +44,60 @@ format:
 
 *Unceded*: Refers to land that was not turned over to the Crown (government) by a treaty or other agreement
 
-<!-- :::
+::: {.notes}
 
-::: {.column width="30%"} -->
+* Be short on this slide
+* Traditional, ancestral, unceded territory of Coast Salish people, inckuding territories of :
+  * Musqueam
+  * Squamish
+  * Tsleil-Waututh Nations
 
-<!-- ![](materials/img/land_acknowledgement.gif) -->
-
-<!-- :::
-
-:::: -->
-
+:::
 
 ## Setup VSCode
 
 Checkout the instruction of your right platform below:
 
-<!------------------------- Panel Tab for setup-------------------------------->
-
 
 :::: {.panel-tabset}
 
-### MacOs
+### MacOS
+
+::: {.cus-mid}
 
 Open this **[link](https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal)** to download, once it is finished:
 
-1. Open the downloaded `VSCode-darwin-universal.zip` file
-2. Move the extracted VS Code app from `Downloads` to `Applications` (Located to your left under `Favorites`)
-3. Launch VS Code and open the `Command Palette` by `Cmd + Shift + P`
-4. Type `shell command`
-5. Select the option: **Install `code` command in PATH**
-6. Restart your terminal and try entering: `code --version` to confirm successful installation
-
-
-### Windows
-
-Open this **[link](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user)** to download.
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-Run the installer, accept default config except:
-
- - **On Select Additional Tasks**
-    - Add 'Open with Code action to Windows file context menu'
-    - Add ‘Open with Code’ action to Windows directory context menu”
-    - Register Code as an editor for supported file types
-    - Add to PATH (should be selected by default)
+1. Open the downloaded `VSCode-darwin-universal.zip` file.
+2. Move the extracted VS Code app from `Downloads` to `Applications`. (Located to your left under `Favorites`)
+3. Launch VS Code and open the `Command Palette` by `Cmd + Shift + P`.
+4. Type `shell command`.
+5. Select the option: **Install `code` command in PATH**.
+6. Restart your terminal and try entering: `code --version` to confirm successful installation.
 
 :::
 
-::: {.column width="50%"}
+### Windows
 
-<!-- ![](materials/img/windows_vsc.png){.absolute top=225 right=25 width="750" height="600"} -->
+Open this **[link](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user)** to download and run it:
+
+:::: {.columns}
+
+::: {.column width="50%" .cus-mid}
+
+<!-- Run the installer, accept default config except: -->
+
+On **Select Additional Tasks**:
+
+- Add 'Open with Code action to Windows file context menu'.
+- Add ‘Open with Code’ action to Windows directory context menu”.
+- Register Code as an editor for supported file types
+- Add to PATH (should be selected by default).
+
+:::
+
+::: {.column width="50%" .cus-small}
+
+
 ![](materials/img/windows_vsc.png){.absolute top=275 right=25 width="750" height="600"}
 
 :::
@@ -110,6 +106,21 @@ Run the installer, accept default config except:
 
 
 ::::
+
+::: {.aside}
+
+These instructions are based on those from [DSCI310](https://ubc-dsci.github.io/dsci-310-student/computer-setup.html)
+
+:::
+
+::: {.notes}
+
+* Emphasis more on MacOS
+* If people have problem, leave time for later
+* Suggest them to look at DSCI310 material for proper setup
+* Go over it first, and go to next slides, then comeback
+
+::: 
 
 
 ## Connecting to Sockeye
@@ -304,6 +315,7 @@ ssh arc # otherwise ssh cwl@sockeye.arc.ubc.ca
 - Whenever you're ready, you submit `batch` jobs to server
 - You can log out and leave a job running
 - Runs with `PBS`, changing to `SLURM`^[Please see [here](https://confluence.it.ubc.ca/display/UARC/PBS+to+Slurm+Migration+-+What+to+expect) for more info.] soon
+
 
 
 <!-- ::: -->

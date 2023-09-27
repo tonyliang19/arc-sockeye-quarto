@@ -26,6 +26,10 @@
 
 /* custom sizings */
 
+.cus-mid {
+  font-size: 32px;
+}
+
 .cus-small {
   font-size: 27px;
 }
