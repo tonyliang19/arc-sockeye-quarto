@@ -431,7 +431,220 @@ module spider mod_name # check available `<mod_name>` in sockeye
 ```
 
 
-## Job Submission
+## Example Job Script
+
+::: {.callout-note .cus-small}
+
+There are [no internet access]{.secondary} during any of the jobs below:
+
+:::
+
+::: {.panel-tabset .small-code}
+
+### Batch Job CPU only
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{bash}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "|2|4|6|7,8|10-11|"
+
+#!/bin/bash
+#PBS -l walltime=00:05:00, select=1:ncpus=2:mem=2gb
+#PBS -N sample_job
+#PBS -A st-singha53-1
+#PBS -m abe
+#PBS -M tliang19@student.ubc.ca
+#PBS -o my_output.txt
+#PBS -e my_error.txt
+
+cd ${PBS_O_WORKDIR}
+python hello_world.py
+```
+
+:::
+
+::: {.column width="50%" .cus-small}
+
+- This asks for 5 min of compute time with 2 cpus and 2GB of RAM
+- You would expect much larger resources in complex scenarios
+- Also, modules/environments/shell codes
+- Most kinds of jobs falls to this category
+
+
+:::
+
+::::
+
+### Batch Job (With GPU)
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+```{bash}
+#| eval: false
+#| echo: true
+#| code-line-numbers: true
+
+#!/bin/bash
+#PBS -l walltime=12:00:00, select=1:ncpus=4:ngpus=2:mem=64gb
+#PBS -N sample_job_gpu
+#PBS -A st-singha53-1-gpu
+#PBS -M tliang19@student.ubc.ca
+#PBS -o my_output.txt
+#PBS -e my_error.txt
+
+# load modules
+module load gcc apptainer cuda
+
+cd ${PBS_O_WORKDIR}
+python hello_world.py
+```
+
+:::
+
+::: {.column width="40%" .cus-small}
+
+- This asks for 12 hours of comp. time, 1 node with 4 cpus and 2 gpus, **AND** 64GB RAM
+- Need to specify number of gpus at `ngpus`
+- Only allows 32G or 64G of memory for GPU
+- Special allocation code, with `st-alloc-gpu`
+- Probably runs this when your works uses neural networks
+
+:::
+
+::::
+
+### Interactive CPU Job
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+```{bash}
+#| eval: false
+#| echo: true
+#| code-line-numbers: true
+
+#!/bin/bash
+#PBS -l walltime=3:00:00,select=1:ncpus=4:mem=16gb
+#PBS -I
+#PBS -q interactive_cpu
+#PBS -N sample_job
+#PBS -A st-singha53-1
+
+# Note here should be empty, since you will get back a bash shell 
+# with the requested resources in the script.
+# And this ones are recommended to use, 
+# when you have simple experiments to conduct without GPU
+```
+
+:::
+
+::: {.column width="40%" .cus-small}
+
+- This ask for a interactive node (shell) of 3 hours , with 4 cpus , with 16GB of RAM
+- The `#PBS -I` and `#PBS -q interactive_cpu` are required to make a job interactive with CPU
+- Otherwise job will be treated as a standard batch job
+- Use this to test small computations or functionalitys of libraries you aim to use
+
+:::
+
+::::
+
+### Interactive GPU Job
+
+:::: {.columns}
+
+::: {.column width="63%"}
+
+```{bash}
+#| eval: false
+#| echo: true
+#| code-line-numbers: true
+
+#!/bin/bash
+#PBS -l walltime=3:00:00,select=1:ncpus=4:ngpus=1:mem=16gb
+#PBS -I
+#PBS -q interactive_gpu
+#PBS -N sample_job
+#PBS -A st-singha53-1
+
+# Note here should be empty, since you will get back a bash shell 
+# with the requested resources in the script.
+# And this ones are recommended to use, when you have simple experiments
+# to conduct that uses GPU.
+```
+
+:::
+
+::: {.column width="37%" .cus-small}
+
+- This ask for a interactive node (shell) of 3 hours , with 4 cpus and 1 gpu , with 16GB of RAM
+- Same as the `interactive job with cpu` but with GPU support
+- Don't need the special code `st-alloc-gpu`
+- Barely used it before, but Sockeye has this available
+
+:::
+
+::::
+
+:::
+
+<!-- ^ Tabset ended here ---->
+
+
+::: {.aside .cus-smaller}
+
+For more information on writing job scripts, checkout sockeye's official [documentation.](https://confluence.it.ubc.ca/display/UARC/Running+Jobs#RunningJobs-BatchJobScripts)
+
+::: 
+
+## Submitting and other useful commands
+
+- Suppose our `pbs` script is saved as `job_script.sh`
+
+::: {.small-code}
+```{bash}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "|1|3|5|7|1,3,5,7|"
+qsub job_script.sh # to submit job
+
+qsub -u $USER # $USER is a pre-defined ENV variable
+
+qdel some_job_id # some_job_id is from after submmision
+
+qstat -x some_job_id # see resource comsumption of job
+```
+
+:::
+
+. . .
+
+::: {.callout-important}
+
+1. On Sockeye, jobs must be run from `~/scratch/` only.
+2. There are [no internet access]{.secondary} on the compute nodes (launched jobs). 
+
+:::
+
+<!-- ::: {.cus-smaller .small-code}
+
+When I'm ready to run, I call something like:
+
+```{bash}
+#| eval: false
+#| echo: true
+
+qsub job_script.pbs # or job_script.sh
+```
+
+::: -->
 
 
 ## Summary workflow

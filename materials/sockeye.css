@@ -11,6 +11,16 @@
 }
 .large { font-size: 130% }
 
+/* custom sizings */
+
+.cus-small {
+  font-size: 27px;
+}
+
+.cus-smaller {
+  font-size: 25px;
+}
+
 .center-custom {
   text-align: center; /* Center text horizontally */
   display: flex; /* Enable flexbox layout */
@@ -19,6 +29,7 @@
   height: 100vh; /* Ensure the element takes up the full viewport height */
 }
 
+/* Colors stuff */
 .primary {
   color: var(--primary);
 }
@@ -34,6 +45,12 @@
 code.sourceCode {
   font-size: 2.25em;
 }
+
+.small-code code.sourceCode {
+    font-size: 1.5em;
+}
+
+
 
 .tl  { text-align: left; }
 .tr  { text-align: right; }
