@@ -654,7 +654,7 @@ For more information on writing job scripts, checkout sockeye's official [docume
 #| code-line-numbers: "|1|3|5|7|1,3,5,7|"
 qsub job_script.sh # to submit job
 
-qsub -u $USER # $USER is a pre-defined ENV variable
+qstat -u $USER # $USER is a pre-defined ENV variable
 
 qdel some_job_id # some_job_id is from after submmision
 
