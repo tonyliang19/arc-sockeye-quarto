@@ -11,6 +11,8 @@ format:
   revealjs:
     logo: materials/img/logo.png
     slide-number: true
+    hash-one-based-index: true 
+    history: false
     #chalkboard: true
     template-partials:
       - title-slide.html
@@ -31,13 +33,14 @@ format:
     transition-speed: default # or fast or slow
 ---
 
-## Land acknowledgement
+## Land acknowledgement {background-image=materials/img/land_ack.jpg background-size=cover background-opacity="0.4"}
 
 
 <!----------------------------Two column section------------------------------------>
-:::: {.columns}
+<!-- :::: {.columns} -->
 
-::: {.column width="70%"}
+<!-- ::: {.column width="70%"} -->
+
 **I would like to acknowledge that I work on the traditional, ancestral, and unceded territory of the Coast Salish Peoples, including the territories of the xwməθkwəy̓əm (Musqueam), Skwxwú7mesh (Squamish), Stó:lō and Səl̓ílwətaʔ/Selilwitulh (Tsleil- Waututh) Nations.**
 
 *Traditional*: Traditionally used and/or occupied by Musqueam people
@@ -46,15 +49,15 @@ format:
 
 *Unceded*: Refers to land that was not turned over to the Crown (government) by a treaty or other agreement
 
-:::
+<!-- :::
 
-::: {.column width="30%"}
+::: {.column width="30%"} -->
 
-![](materials/img/land_acknowledgement.gif)
+<!-- ![](materials/img/land_acknowledgement.gif) -->
 
-:::
+<!-- :::
 
-::::
+:::: -->
 
 
 ## Setup VSCode
@@ -672,7 +675,7 @@ We are building our lab handbook with known FAQs for debugging on Sockeye, check
 
 <!-- ![](materials/img/website_bkg.png) -->
 
-## {background-image=materials/img/website_bkg.png background-size=contain background-position=top}
+## {background-image=materials/img/website_no_bkg.png background-size=contain background-position=top}
 
 
 [Thanks!]{.larger .center-custom}
