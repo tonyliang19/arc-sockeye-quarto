@@ -1,12 +1,35 @@
 ---
-session: Introduction to Sockeye
-format: revealjs
+title: Sockeye Introduction
+author: Tony Liang
+institute: University of British Columbia
+date: 2023-09-27
+date-format: long
 engine: knitr
-metadata-files: 
-  - _metadata.yml
+css: 
+  - materials/sockeye.css
+format:
+  revealjs:
+    logo: materials/img/logo.png
+    slide-number: true
+    #chalkboard: true
+    template-partials:
+      - title-slide.html
+    embed-resources: true
+    width: 1600
+    height: 900
+    mouse-wheel: true
+    scrollable: false
+    code-overflow: wrap
+    hash-type: number
+    link-external-icon: true
+    link-external-newwindow: true
+    lang: en-CA
+    theme:
+      - sockeye.scss
+    output-file: index.html # naming other stuff, gh complains
+    transition: fade
+    transition-speed: default # or fast or slow
 ---
-
-{{< include _titleslide.qmd >}}
 
 ## Land acknowledgement
 

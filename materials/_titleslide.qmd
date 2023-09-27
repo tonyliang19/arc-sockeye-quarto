@@ -1,0 +1,14 @@
+<!-- ---
+---
+
+##  {{< meta session >}} {transition="fade" transition-speed="fast" .center2}
+
+<br>
+
+<br>
+
+[Univerisity of British Columbia]{.secondary}
+
+[{{< meta author >}}]{.secondary}
+
+`r strftime(lubridate::today(), "%d %B %Y")` -->
