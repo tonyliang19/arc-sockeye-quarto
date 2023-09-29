@@ -492,7 +492,7 @@ There are [no internet access]{.secondary} during any of the jobs below:
 #| code-line-numbers: "|2|4|6|7,8|10-11|"
 
 #!/bin/bash
-#PBS -l walltime=00:05:00, select=1:ncpus=2:mem=2gb
+#PBS -l walltime=00:05:00,select=1:ncpus=2:mem=2gb
 #PBS -N sample_job
 #PBS -A st-singha53-1
 #PBS -m abe
