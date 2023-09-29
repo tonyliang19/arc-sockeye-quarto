@@ -530,7 +530,7 @@ python hello_world.py
 #| code-line-numbers: true
 
 #!/bin/bash
-#PBS -l walltime=12:00:00, select=1:ncpus=4:ngpus=2:mem=64gb
+#PBS -l walltime=12:00:00,select=1:ncpus=4:ngpus=2:mem=64gb
 #PBS -N sample_job_gpu
 #PBS -A st-singha53-1-gpu
 #PBS -M tliang19@student.ubc.ca
